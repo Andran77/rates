@@ -1,0 +1,19 @@
+<div class='spinner' *ngIf='loading; else elseBlock'>
+    <div class='bounce1'></div>
+    <div class='bounce2'></div>
+    <div class='bounce3'></div>
+</div>
+<ng-template #elseBlock>
+    <div>
+        <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+            </tr>
+            <tr *ngFor='let rate of rates'>
+              <td>{{rate.symbol | symbol}}</td>
+              <td>{{rate.price}}</td>
+            </tr>
+          </table>
+    </div>
+</ng-template>
